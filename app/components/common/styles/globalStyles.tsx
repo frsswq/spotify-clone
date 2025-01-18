@@ -1,25 +1,11 @@
 import styled, { createGlobalStyle } from "styled-components";
 
-const globalStyles = createGlobalStyle`
+export const GlobalStyles = createGlobalStyle`
   /* classic */
   * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-  }
-
-  /* colours */
-  :root {
-    /* gray */
-    --gray-100: #f5f5f5;
-    --gray-200: #eeeeee;
-    --gray-300: #e0e0e0;
-    --gray-400: #bdbdbd;
-    --gray-500: #9e9e9e;
-    --gray-600: #757575;
-    --gray-700: #616161;
-    --gray-800: #424242;
-    --gray-900: #212121;
   }
 
   /* focus */
@@ -31,6 +17,11 @@ const globalStyles = createGlobalStyle`
 
   *:focus:not(:focus-visible) {
     outline: none;
+  }
+
+  button {
+    border: none;
+    box-shadow: none;
   }
 `;
 
