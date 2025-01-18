@@ -8,8 +8,8 @@ import {
 } from "react-router";
 
 import type { Route } from "./+types/root";
-import globalColors from "./globalColors.css?url";
-import { GlobalStyles } from "./components/common/styles/GlobalStyles";
+import globalColors from "./styles/globalColors.css?url";
+import defaultStyles from "./styles/defaultStyles.css?url";
 
 export const links: Route.LinksFunction = () => [
   { rel: "preconnect", href: "https://fonts.googleapis.com" },
@@ -25,6 +25,10 @@ export const links: Route.LinksFunction = () => [
   {
     rel: "stylesheet",
     href: globalColors,
+  },
+  {
+    rel: "stylesheet",
+    href: defaultStyles,
   },
 ];
 
@@ -47,12 +51,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
 }
 
 export default function App() {
-  return (
-    <>
-      <Outlet />;
-      <GlobalStyles />
-    </>
-  );
+  return <Outlet />;
 }
 
 export function ErrorBoundary({ error }: Route.ErrorBoundaryProps) {

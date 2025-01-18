@@ -1,0 +1,6 @@
+- sidebar
+- homepage
+- searchbar
+- search menu?
+- music player bar
+- music player main
